@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VEM — The Bottle From the Future</title>
+  <style>
+    :root{--bg:#071027;--card:#0f1b2b;--accent:#57d2ff;--muted:#a8b6c8;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#eaf6ff; background: radial-gradient(1200px 600px at 10% 10%, rgba(87,210,255,0.06), transparent), linear-gradient(180deg,#031027 0%, #071a2b 100%);}
+    a{color:var(--accent); text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(6px)}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:46px;height:46px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#8b5cff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#012;box-shadow:0 6px 18px rgba(87,210,255,0.06)}
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:10px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:36px;padding:48px 6vw;align-items:center}
+    .eyebrow{color:var(--muted);font-weight:600}
+    h1{font-size:46px;line-height:1.02;margin:8px 0}
+    p.lead{color:var(--muted);max-width:56ch}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{background:linear-gradient(90deg,var(--accent),#8b5cff);color:#012;border:none;padding:12px 18px;border-radius:12px;font-weight:800;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+    main{padding-bottom:60px}
+    .store{padding:24px 6vw}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .product{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .product .name{font-weight:800}
+    .product .meta{color:var(--muted);font-size:14px}
+    .product .actions{display:flex;gap:8px;margin-top:10px}
+    footer{padding:28px 6vw;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+    .note{color:var(--muted)}
+    form{background:var(--card);padding:20px;border-radius:12px;max-width:500px;margin:30px auto;box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+    input, select, button, canvas{width:100%;padding:10px;margin-bottom:15px;border-radius:8px;border:1px solid rgba(255,255,255,0.1)}
+    button.submit{background:var(--accent);border:none;color:#012;font-weight:700;cursor:pointer}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;gap:18px}.products{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="mark">V</div>
+      <div>
+        <div style="font-weight:800">VEM</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">The Bottle From the Future</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#store">Store</a>
+      <a href="#design">Design Your Bottle</a>
+      <a href="#contact" class="ghost">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Student Project Concept</div>
+        <h1>VEM: Your Smart, Customizable Bottle</h1>
+        <p class="lead">Not your ordinary bottle — VEM is fully customizable in design. Flavors and temperature are controlled via our app. To get a new flavor, you purchase flavor pods separately from our website.</p>
+        <div class="cta">
+          <button class="btn" onclick="document.getElementById('store').scrollIntoView({behavior:'smooth'})">Shop</button>
+          <button class="btn ghost" onclick="document.getElementById('design').scrollIntoView({behavior:'smooth'})">Design Yours</button>
+        </div>
+      </div>
+      <aside>
+        <img src="https://via.placeholder.com/260x360?text=VEM+Futuristic" alt="VEM Bottle" style="border-radius:20px;">
+      </aside>
+    </section>
+
+    <section id="store" class="store">
+      <h2>Fake Store</h2>
+      <div class="products">
+        <div class="product">
+          <div class="name">VEM Mini</div>
+          <div class="meta">Small, portable.</div>
+          <div style="font-weight:800">$39 <span style="text-decoration:line-through;color:var(--muted)">$78</span> • 50% OFF</div>
+          <div class="actions">
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="name">VEM Original</div>
+          <div class="meta">Standard size, app-ready.</div>
+          <div style="font-weight:800">$59</div>
+          <div class="actions">
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="name">VEM Max</div>
+          <div class="meta">Large capacity, long battery life.</div>
+          <div style="font-weight:800">$79</div>
+          <div class="actions">
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="design">
+      <h2>Design Your Own VEM Bottle</h2>
+      <p>Choose your bottle color and draw your custom design. Temperature and flavors are managed in our app; new flavors require flavor pods purchased from the store.</p>
+      <form>
+        <label>Choose Bottle Color:</label>
+        <select>
+          <option>Midnight Black</option>
+          <option>Ocean Blue</option>
+          <option>Sunset Pink</option>
+          <option>Future Silver</option>
+        </select>
+
+        <label>Draw Your Design:</label>
+        <canvas id="drawCanvas" width="400" height="300" style="background:#fff; border:1px solid #ccc;"></canvas>
+        <button type="button" onclick="clearCanvas()" style="margin-bottom:15px;">Clear Drawing</button>
+
+        <label>Add Your Name (optional):</label>
+        <input type="text" placeholder="Your Name">
+
+        <label>Shipping Address:</label>
+        <input type="text" placeholder="Street, City, Country">
+
+        <button type="submit" class="submit">Submit Design</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div>
+      <div style="font-weight:800">Contact</div>
+      <div class="note">support@vemfuture.com • 09XX-XXX-XXXX • @vemfuture</div>
+    </div>
+    <div class="note">Student project concept — products and prices are fictional.</div>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('drawCanvas');
+    const ctx = canvas.getContext('2d');
+    let drawing = false;
+
+    canvas.addEventListener('mousedown',()=>drawing=true);
+    canvas.addEventListener('mouseup',()=>drawing=false);
+    canvas.addEventListener('mouseout',()=>drawing=false);
+    canvas.addEventListener('mousemove', draw);
+
+    function draw(e){
+      if(!drawing) return;
+      ctx.lineWidth=3; ctx.lineCap='round'; ctx.strokeStyle='black';
+      ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke(); ctx.beginPath(); ctx.moveTo(e.offsetX,e.offsetY);
+    }
+
+    function clearCanvas(){ ctx.clearRect(0,0,canvas.width,canvas.height); ctx.beginPath(); }
+  </script>
+</body>
+</html>
